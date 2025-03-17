@@ -24,10 +24,13 @@ createAppKit({
   },
 });
 
-export default function ReownProvider({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return children; // Configure the <appkit-button> or a similar button inside
-}
+/**
+ * @description ReownProvider is a component that provides the Reown AppKit to the application.
+ * @param {React.ReactNode} children - The children of the ReownProvider.
+ * @returns {React.ReactNode} The children of the ReownProvider.
+ */
+const ReownProvider = ({ children }: { children: React.ReactNode }) => {
+  return children;
+};
+
+export default ReownProvider;
