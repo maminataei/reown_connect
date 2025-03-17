@@ -32,6 +32,7 @@ export default tseslint.config(
             FunctionDeclaration: true,
             MethodDefinition: true,
             ClassDeclaration: true,
+            ArrowFunctionExpression: true,
           },
         },
       ],
