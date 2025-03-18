@@ -6,12 +6,14 @@ interface StoreProviderProps {
 }
 
 /**
- * @description StoreProvider is a component that initializes the Zustand store.
- * @param {ReactNode} children - The children of the StoreProvider.
- * @returns {ReactNode} The children of the StoreProvider.
+ * Provider component that wraps the application with Zustand store context.
+ * Handles initialization of persisted state and ensures all child components
+ * have access to the global state management system.
+ *
+ * @param {ReactNode} children - Child components that will have access to the Zustand store
+ * @returns {ReactNode} Children wrapped with store context and hydrated state
  */
 const StoreProvider = ({ children }: StoreProviderProps) => {
-  // Initialize the store
   useTabStore.persist.rehydrate();
 
   return <>{children}</>;

@@ -4,8 +4,10 @@ import RouterProvider from "./RouterProvider";
 import StoreProvider from "./StoreProvider";
 
 /**
- * @description Providers is a component that provides the Reown AppKit to the application.
- * @returns {React.ReactNode} The children of the Providers.
+ * Root provider component that wraps the application with necessary context providers.
+ * Combines StoreProvider for state management, RouterProvider for navigation,
+ * and ReownProvider for blockchain functionality.
+ * @returns {React.ReactNode} The application wrapped with all required providers
  */
 const Providers = () => {
   return (

@@ -3,6 +3,12 @@ import CardHeader from "../../../components/card/CardHeader";
 import CardTitle from "../../../components/card/CardTitle";
 import { useAppKitAccount } from "@reown/appkit/react";
 
+/**
+ * A component that displays the header section of the wallet connection interface.
+ * Shows connection status indicators and descriptive text about wallet connectivity.
+ * Handles different states like connecting, reconnecting and connected.
+ * @returns {React.ReactNode} A header component with wallet connection status and description
+ */
 const WalletHeader = () => {
   const { status } = useAppKitAccount();
   return (

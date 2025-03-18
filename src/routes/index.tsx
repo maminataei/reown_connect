@@ -3,8 +3,12 @@ import WalletConnect from "../pages/wallet-connect";
 import { Toaster } from "react-hot-toast";
 
 /**
- * @description AppRoutes is the main component that defines the routes for the application.
- * @returns {React.ReactNode} The routes for the application.
+ * Main routing component that defines the application's navigation structure.
+ * Handles URL-based routing between different pages and includes a default
+ * redirect from the root path to the wallet connection page.
+ *
+ * @returns {React.ReactNode} A Routes component containing all application routes
+ * and a toast notification system
  */
 const AppRoutes = () => {
   return (
