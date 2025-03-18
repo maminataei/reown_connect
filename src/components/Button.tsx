@@ -11,12 +11,13 @@ interface ButtonProps {
 }
 
 /**
- * @param {ReactNode} children - The content of the button.
- * @param {"primary" | "secondary" | "destructive"} variant - The variant of the button.
- * @param {() => void} onClick - The function to call when the button is clicked.
- * @param {boolean} disabled - Whether the button is disabled.
- * @param {string} className - The class name to apply to the button.
- * @returns {ReactNode} The button.
+ * A reusable button component with different variants and states
+ * @param {ReactNode} children - The content to display inside the button
+ * @param {"primary" | "secondary" | "destructive"} variant - The visual style variant of the button
+ * @param {() => void} onClick - The callback function to execute when the button is clicked
+ * @param {boolean} disabled - Whether the button is in a disabled state
+ * @param {string} className - Additional CSS classes to apply to the button
+ * @returns {ReactNode} A styled button component with the specified properties
  */
 const Button = ({
   children,
