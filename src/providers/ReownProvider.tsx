@@ -27,9 +27,16 @@ createAppKit({
 });
 
 /**
- * @description ReownProvider is a component that provides the Reown AppKit to the application.
- * @param {React.ReactNode} children - The children of the ReownProvider.
- * @returns {React.ReactNode} The children of the ReownProvider.
+ * Provider component that wraps the application with Reown AppKit configuration.
+ * The AppKit is initialized above with settings for:
+ * - Network support (Arbitrum and Ethereum Mainnet)
+ * - Project metadata and identifiers
+ * - Ethers.js v5 adapter integration
+ * - Analytics and wallet guide features
+ *
+ * @param {object} props - Component props
+ * @param {React.ReactNode} props.children - Child components that will have access to AppKit features
+ * @returns {React.ReactNode} Children wrapped with AppKit context
  */
 const ReownProvider = ({ children }: { children: React.ReactNode }) => {
   return children;

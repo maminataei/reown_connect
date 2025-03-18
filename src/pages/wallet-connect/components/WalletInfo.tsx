@@ -4,16 +4,32 @@ import { Copy, Wallet } from "lucide-react";
 import Button from "../../../components/Button";
 import { useTabStore } from "../../../store/init";
 
+/**
+ * Displays information about the currently connected wallet, including address,
+ * connection status, and transaction capabilities
+ * @returns {React.ReactNode} A React component showing wallet connection details and controls
+ */
 const ConnectedWallet = () => {
   const { status } = useAppKitAccount();
   const { walletProvider } = useAppKitProvider("eip155");
   const { walletInfo: data } = useTabStore();
-  // Helper to truncate wallet address for display
+
+  /**
+   * Shortens an Ethereum address by displaying only the first 6 and last 4 characters
+   * @param {string} address - The full Ethereum wallet address to truncate (e.g. "0x1234...5678")
+   * @returns {string} The shortened address with format "0x1234...5678" or empty string if no address provided
+   */
   const truncateAddress = (address: string) => {
     if (!address) return "";
     return `${address.slice(0, 6)}...${address.slice(-4)}`;
   };
 
+  /**
+   * Initiates a test transaction by sending a small amount of ETH back to the user's own address.
+   * Uses the connected wallet provider and signer to execute the transaction.
+   * @returns {Promise<void>} A promise that resolves when the transaction is sent
+   * @throws {Error} If there's an issue sending the transaction or if chainId is missing
+   */
   const handleTestTransaction = async () => {
     if (!data?.chainId) return;
     try {

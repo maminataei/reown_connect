@@ -5,9 +5,10 @@ interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 /**
- * @param {string} className - The class name to apply to the card.
- * @param {React.HTMLAttributes<HTMLDivElement>} props - The props to apply to the card.
- * @returns {React.ReactNode} The card.
+ * A container component that provides a consistent card layout with shadow and border styling
+ * @param {string} className - Additional CSS classes to apply to the card container
+ * @param {React.HTMLAttributes<HTMLDivElement>} props - Additional HTML div attributes to apply
+ * @returns {React.ReactNode} A styled card container with the specified properties
  */
 const Card = ({ className = "", ...props }: CardProps) => {
   return (

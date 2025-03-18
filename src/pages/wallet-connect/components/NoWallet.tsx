@@ -1,7 +1,11 @@
 "use client";
-
 import { Wallet } from "lucide-react";
 
+/**
+ * A component that displays a message when no wallet is connected, showing a wallet icon
+ * and prompting the user to connect their wallet to proceed with transactions
+ * @returns {React.ReactNode} A styled container with wallet icon and connection prompt
+ */
 const NoWallet = () => {
   return (
     <div className="border-2 border-[#5c6ac4]/20 rounded-lg p-6 flex flex-col items-center justify-center bg-[#f9fafb]">

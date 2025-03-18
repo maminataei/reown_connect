@@ -4,6 +4,11 @@ import { useAppKitAccount } from "@reown/appkit/react";
 import NoWallet from "../NoWallet";
 import ConnectedWallet from "../WalletInfo";
 
+/**
+ * A tab component that displays either a QR code for wallet connection or the connected wallet information
+ * @returns {React.ReactNode} A component that shows the QR code for connecting a wallet when disconnected,
+ * or displays wallet information when connected
+ */
 const QRCodeTab = () => {
   const { isConnected } = useAppKitAccount();
 

@@ -25,7 +25,7 @@ export default function TabList({
 }: ITabListProps) {
   return (
     <div
-      className={`grid grid-cols-${tabs.length} mb-6 bg-[#f9fafb] rounded-md overflow-hidden`}
+      className={`grid grid-cols-${tabs.length} grid-flow-col mb-6 bg-[#f9fafb] rounded-md overflow-hidden`}
     >
       {tabs.map((tab) => (
         <Tab
