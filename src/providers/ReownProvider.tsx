@@ -1,27 +1,29 @@
 import { createAppKit } from "@reown/appkit/react";
-import { EthersAdapter } from "@reown/appkit-adapter-ethers";
 import { arbitrum, mainnet } from "@reown/appkit/networks";
+import { Ethers5Adapter } from "@reown/appkit-adapter-ethers5";
 
 // 1. Get projectId
-const projectId = import.meta.env.PROJECT_ID;
+const projectId = import.meta.env.VITE_PROJECT_ID;
 
 // 3. Create a metadata object - optional
 const metadata = {
-  name: import.meta.env.PROJECT_NAME,
-  description: import.meta.env.PROJECT_DESCRIPTION,
-  url: import.meta.env.PROJECT_URL, // origin must match your domain & subdomain
-  icons: [import.meta.env.PROJECT_ICON],
+  name: import.meta.env.VITE_PROJECT_NAME,
+  description: import.meta.env.VITE_PROJECT_DESCRIPTION,
+  url: import.meta.env.VITE_PROJECT_URL, // origin must match your domain & subdomain
+  icons: [import.meta.env.VITE_PROJECT_ICON],
 };
 
 // 4. Create a AppKit instance
 createAppKit({
-  adapters: [new EthersAdapter()],
+  adapters: [new Ethers5Adapter()],
   networks: [arbitrum, mainnet],
   metadata,
   projectId,
   features: {
     analytics: true, // Optional - defaults to your Cloud configuration
   },
+  themeMode: "dark",
+  enableWalletGuide: true,
 });
 
 /**

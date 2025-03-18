@@ -1,28 +1,38 @@
+import { useAppKitAccount } from "@reown/appkit/react";
 import Card from "../../components/card/Card";
 import CardContent from "../../components/card/CardContent";
-import CardHeader from "../../components/card/CardHeader";
-import CardTitle from "../../components/card/CardTitle";
+import WalletHeader from "./components/WalletHeader";
+import WalletFooter from "./components/WalletFooter";
+import TabList from "../../components/TabList";
+import { useState } from "react";
+import QRCodeTab from "./components/tabs/QrCode";
+import ManualConnectionTab from "./components/tabs/Manual";
 
 const WalletConnect = () => {
+  const { isConnected } = useAppKitAccount();
+  const [activeTab, setActiveTab] = useState("qr-code");
+  const handleTabChange = (tab: string) => {
+    setActiveTab(tab);
+  };
   return (
-    <Card>
-      <CardHeader>
-        <CardTitle>
-          <div className="flex items-center justify-between">
-            <h2 className="text-xl font-bold">Crypto Wallet Connection</h2>
-            {isConnected && (
-              <span className="bg-white text-[#008060] px-3 py-1 rounded-full text-sm font-medium flex items-center gap-1">
-                <CheckCircle className="h-3 w-3" /> Connected
-              </span>
-            )}
-          </div>
-          <p className="text-white/80 text-sm mt-1">
-            Connect your cryptocurrency wallet using WalletConnect v2
-          </p>
-        </CardTitle>
-      </CardHeader>
-      <CardContent></CardContent>
-    </Card>
+    <div className="bg-gradient-to-br from-[#f9fafb] to-white p-6 min-h-screen flex items-center justify-center">
+      <Card>
+        <WalletHeader />
+        <CardContent>
+          <TabList
+            tabs={[
+              { id: "qr-code", label: "QR Code" },
+              { id: "manual", label: "Manual" },
+            ]}
+            activeTab={activeTab}
+            onTabChange={handleTabChange}
+          />
+          {activeTab === "qr-code" && <QRCodeTab />}
+          {activeTab === "manual" && <ManualConnectionTab />}
+        </CardContent>
+        {isConnected && <WalletFooter />}
+      </Card>
+    </div>
   );
 };
 
