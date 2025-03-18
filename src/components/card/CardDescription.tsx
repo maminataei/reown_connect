@@ -5,9 +5,10 @@ interface CardDescriptionProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 /**
- * @param {string} className - The class name to apply to the card description.
- * @param {React.HTMLAttributes<HTMLDivElement>} props - The props to apply to the card description.
- * @returns {React.ReactNode} The card description.
+ * A component for displaying descriptive text within a card
+ * @param {string} className - Additional CSS classes to apply to the description container
+ * @param {React.HTMLAttributes<HTMLDivElement>} props - Additional HTML div attributes to apply
+ * @returns {React.ReactNode} A styled description container with the specified properties
  */
 const CardDescription = ({ className, ...props }: CardDescriptionProps) => (
   <div
