@@ -26,7 +26,7 @@ const Button = ({
   className = "",
 }: ButtonProps) => {
   const baseStyles =
-    "w-full h-12 text-lg font-medium rounded-md flex items-center justify-center transition-colors";
+    "w-full h-12 text-lg font-medium rounded-md flex items-center justify-center transition-colors cursor-pointer";
 
   const variantStyles = {
     primary: "bg-[#008060] hover:bg-[#008060]/90 text-white",
