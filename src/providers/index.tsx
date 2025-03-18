@@ -1,6 +1,7 @@
 import AppRoutes from "../routes";
 import ReownProvider from "./ReownProvider";
 import RouterProvider from "./RouterProvider";
+import StoreProvider from "./StoreProvider";
 
 /**
  * @description Providers is a component that provides the Reown AppKit to the application.
@@ -8,11 +9,13 @@ import RouterProvider from "./RouterProvider";
  */
 const Providers = () => {
   return (
-    <RouterProvider>
-      <ReownProvider>
-        <AppRoutes />
-      </ReownProvider>
-    </RouterProvider>
+    <StoreProvider>
+      <RouterProvider>
+        <ReownProvider>
+          <AppRoutes />
+        </ReownProvider>
+      </RouterProvider>
+    </StoreProvider>
   );
 };
 

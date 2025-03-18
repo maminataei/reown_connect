@@ -24,7 +24,9 @@ export default function TabList({
   onTabChange,
 }: ITabListProps) {
   return (
-    <div className="grid grid-cols-2 mb-6 bg-[#f9fafb] rounded-md overflow-hidden">
+    <div
+      className={`grid grid-cols-${tabs.length} mb-6 bg-[#f9fafb] rounded-md overflow-hidden`}
+    >
       {tabs.map((tab) => (
         <Tab
           key={tab.id}
