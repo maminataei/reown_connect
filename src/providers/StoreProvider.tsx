@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { useTabStore } from "../store/init";
+import { useTabStore } from "@/store/init";
 
 interface StoreProviderProps {
   children: ReactNode;

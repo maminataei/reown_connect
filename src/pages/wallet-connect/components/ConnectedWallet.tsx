@@ -1,8 +1,8 @@
 import { useAppKitAccount, useAppKitProvider } from "@reown/appkit/react";
 import { ethers } from "ethers";
 import { Copy, Wallet } from "lucide-react";
-import Button from "../../../components/Button";
-import { useTabStore } from "../../../store/init";
+import Button from "@/components/Button";
+import { useTabStore } from "@/store/init";
 
 /**
  * Displays information about the currently connected wallet, including address,

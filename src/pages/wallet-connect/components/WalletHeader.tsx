@@ -1,6 +1,6 @@
 import { CheckCircleIcon, Loader2Icon } from "lucide-react";
-import CardHeader from "../../../components/card/CardHeader";
-import CardTitle from "../../../components/card/CardTitle";
+import CardHeader from "@/components/card/CardHeader";
+import CardTitle from "@/components/card/CardTitle";
 import { useAppKitAccount } from "@reown/appkit/react";
 
 /**

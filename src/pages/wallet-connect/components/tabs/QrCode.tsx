@@ -1,8 +1,8 @@
 "use client";
 
 import { useAppKitAccount } from "@reown/appkit/react";
-import NoWallet from "../NoWallet";
-import ConnectedWallet from "../WalletInfo";
+import NoWallet from "@/pages/wallet-connect/components/NoWallet";
+import ConnectedWallet from "@/pages/wallet-connect/components/ConnectedWallet";
 
 /**
  * A tab component that displays either a QR code for wallet connection or the connected wallet information

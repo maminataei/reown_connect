@@ -5,8 +5,8 @@ import { useAppKitAccount, useDisconnect } from "@reown/appkit/react";
 import { WalletIcon, X } from "lucide-react";
 import { useCallback } from "react";
 import toast from "react-hot-toast";
-import Button from "../../../components/Button";
-import { useTabStore } from "../../../store/init";
+import Button from "@/components/Button";
+import { useTabStore } from "@/store/init";
 
 /**
  * A footer component that handles wallet connection and disconnection functionality.
