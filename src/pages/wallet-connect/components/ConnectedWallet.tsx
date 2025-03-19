@@ -1,8 +1,7 @@
-import { useAppKitAccount, useAppKitProvider } from "@reown/appkit/react";
-import { ethers } from "ethers";
-import { Copy, Wallet } from "lucide-react";
 import Button from "@/components/Button";
 import { useTabStore } from "@/store/init";
+import { useAppKitAccount } from "@reown/appkit/react";
+import { Copy, Wallet } from "lucide-react";
 
 /**
  * Displays information about the currently connected wallet, including address,
@@ -11,7 +10,6 @@ import { useTabStore } from "@/store/init";
  */
 const ConnectedWallet = () => {
   const { status } = useAppKitAccount();
-  const { walletProvider } = useAppKitProvider("eip155");
   const { walletInfo: data } = useTabStore();
 
   /**
