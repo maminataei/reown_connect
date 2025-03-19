@@ -1,54 +1,112 @@
-# React + TypeScript + Vite
+# Reown Connect
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+web application built with React, TypeScript, and Vite for connecting and interacting with blockchain networks using the Reown AppKit.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React with TypeScript support
+- Vite for fast development and building
+- Integration with Reown AppKit for blockchain interactions
+- Support for multiple Ethers adapters
+- Form handling with React Hook Form and Yup validation
+- State management with Zustand
+- Data fetching with TanStack Query
+- UI with Tailwind CSS
+- Toast notifications with React Hot Toast
+- Type-safe development environment
 
-## Expanding the ESLint configuration
+## 📋 Prerequisites
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Node.js (v16 or higher)
+- Yarn package manager
+- A modern web browser
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🛠️ Installation
+
+1. Clone the repository:
+
+```bash
+git clone <repository-url>
+cd reown_connect
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Install dependencies:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+yarn install
 ```
+
+3. Create a `.env` file in the root directory and add necessary environment variables:
+
+```env
+VITE_PROJECT_NAME=reown_connect
+VITE_PROJECT_DESCRIPTION=Reown Connect
+VITE_PROJECT_URL=https://reown-connect.vercel.app
+VITE_PROJECT_ICON=https://reown.com/icon.png
+VITE_PROJECT_ID=71b5d4ca99c065608863bb5d9e06af98
+```
+
+## 🚀 Development
+
+To start the development server:
+
+```bash
+yarn dev
+```
+
+The application will be available at `http://localhost:80`
+
+## 🏗️ Building for Production
+
+To create a production build:
+
+```bash
+yarn build
+```
+
+To preview the production build:
+
+```bash
+yarn preview
+```
+
+## 📁 Project Structure
+
+```
+reown_connect/
+├── src/
+│   ├── assets/         # Static assets (images, fonts, etc.)
+│   ├── components/     # Reusable UI components
+│   ├── pages/         # Page components
+│   ├── providers/     # React context providers
+│   ├── routes/        # Route configurations
+│   ├── store/         # Zustand store configurations
+│   ├── App.css        # Global styles
+│   └── main.tsx       # Application entry point
+├── public/            # Public static files
+├── .env              # Environment variables
+├── package.json      # Project dependencies and scripts
+├── tsconfig.json     # TypeScript configuration
+└── vite.config.ts    # Vite configuration
+```
+
+## 🛠️ Available Scripts
+
+- `yarn dev` - Start development server
+- `yarn build` - Create production build
+- `yarn preview` - Preview production build
+- `yarn lint` - Run ESLint for code linting
+
+## 🔧 Technologies Used
+
+- React 19
+- TypeScript
+- Vite
+- Reown AppKit
+- Tailwind CSS
+- React Hook Form
+- Yup
+- Zustand
+- TanStack Query
+- React Router
+- React Hot Toast
