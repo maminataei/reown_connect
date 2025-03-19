@@ -24,35 +24,6 @@ const ConnectedWallet = () => {
     return `${address.slice(0, 6)}...${address.slice(-4)}`;
   };
 
-  /**
-   * Initiates a test transaction by sending a small amount of ETH back to the user's own address.
-   * Uses the connected wallet provider and signer to execute the transaction.
-   * @returns {Promise<void>} A promise that resolves when the transaction is sent
-   * @throws {Error} If there's an issue sending the transaction or if chainId is missing
-   */
-  const handleTestTransaction = async () => {
-    if (!data?.chainId) return;
-    try {
-      // Create provider with explicit network configuration
-      const provider = new ethers.providers.Web3Provider(
-        walletProvider as ethers.providers.ExternalProvider,
-        {
-          name: data?.chainNamespace,
-          chainId: Number(data?.chainId),
-        }
-      );
-
-      const signer = provider.getSigner(data?.address);
-      const tx = await signer?.sendTransaction({
-        to: data?.address || "",
-        value: ethers.utils.parseEther("0.0001"), // Reduced amount for testing
-      });
-      console.log("Transaction sent:", tx);
-    } catch (error) {
-      console.error("Error sending transaction:", error);
-    }
-  };
-
   return (
     <div className="space-y-6">
       <div className="space-y-3">
@@ -85,7 +56,9 @@ const ConnectedWallet = () => {
           variant="secondary"
           disabled={status === "reconnecting" || status === "connecting"}
           className="cursor-pointer"
-          onClick={handleTestTransaction}
+          onClick={() => {
+            alert("coming soon");
+          }}
         >
           {status === "reconnecting" || status === "connecting"
             ? "Processing..."
