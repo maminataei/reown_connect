@@ -70,12 +70,12 @@ const ConnectedWallet = () => {
             </span>
           </div>
           <div className="flex gap-1">
-            <button
-              className="h-8 w-8 text-[#5c6ac4] hover:text-[#5c6ac4]/80 hover:bg-[#5c6ac4]/10 rounded-full flex items-center justify-center transition-colors cursor-pointer"
-              title="Copy address"
+            <Button
+              variant="secondary"
+              className="!w-8 !h-8 !bg-transparent !text-[#5c6ac4] hover:!bg-[#5c6ac4]/10 !rounded-full"
             >
               <Copy className="h-4 w-4" />
-            </button>
+            </Button>
           </div>
         </div>
       </div>

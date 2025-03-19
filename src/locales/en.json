@@ -1,0 +1,39 @@
+{
+  "common": {
+    "processing": "Processing...",
+    "error": "Error",
+    "success": "Success"
+  },
+  "wallet": {
+    "title": "Crypto Wallet Connection",
+    "status": {
+      "connecting": "Connecting...",
+      "connected": "Connected Wallet",
+      "reconnecting": "Reconnecting..."
+    },
+    "buttons": {
+      "connect": "Connect Wallet",
+      "connectQR": "Connect with QR Code",
+      "disconnect": "Disconnect Wallet",
+      "sendTest": "Send Test Transaction"
+    },
+    "tabs": {
+      "qrCode": "QR Code",
+      "manual": "Manual"
+    },
+    "messages": {
+      "connectedSuccess": "Wallet connected successfully",
+      "disconnectedSuccess": "Wallet disconnected successfully",
+      "connectionError": "Error during wallet connection",
+      "disconnectError": "Error during disconnect",
+      "qrCodeError": "Error during QR code connection"
+    }
+  },
+  "button": {
+    "variants": {
+      "primary": "primary",
+      "secondary": "secondary",
+      "destructive": "destructive"
+    }
+  }
+}
