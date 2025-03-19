@@ -1,0 +1,39 @@
+{
+  "common": {
+    "processing": "در حال پردازش...",
+    "error": "خطا",
+    "success": "موفقیت"
+  },
+  "wallet": {
+    "title": "اتصال کیف پول ارز دیجیتال",
+    "status": {
+      "connecting": "در حال اتصال...",
+      "connected": "کیف پول متصل شده",
+      "reconnecting": "در حال اتصال مجدد..."
+    },
+    "buttons": {
+      "connect": "اتصال کیف پول",
+      "connectQR": "اتصال با کد QR",
+      "disconnect": "قطع اتصال کیف پول",
+      "sendTest": "ارسال تراکنش تست"
+    },
+    "tabs": {
+      "qrCode": "کد QR",
+      "manual": "دستی"
+    },
+    "messages": {
+      "connectedSuccess": "کیف پول با موفقیت متصل شد",
+      "disconnectedSuccess": "اتصال کیف پول با موفقیت قطع شد",
+      "connectionError": "خطا در اتصال کیف پول",
+      "disconnectError": "خطا در قطع اتصال",
+      "qrCodeError": "خطا در اتصال با کد QR"
+    }
+  },
+  "button": {
+    "variants": {
+      "primary": "primary",
+      "secondary": "secondary",
+      "destructive": "destructive"
+    }
+  }
+}
