@@ -1,5 +1,5 @@
 import { Navigate, Route, Routes } from "react-router";
-import WalletConnect from "../pages/wallet-connect";
+import WalletConnect from "@/pages/wallet-connect/index";
 import { Toaster } from "react-hot-toast";
 
 /**

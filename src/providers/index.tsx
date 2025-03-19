@@ -1,7 +1,7 @@
-import AppRoutes from "../routes";
-import ReownProvider from "./ReownProvider";
-import RouterProvider from "./RouterProvider";
-import StoreProvider from "./StoreProvider";
+import AppRoutes from "@/routes";
+import ReownProvider from "@/providers/ReownProvider";
+import RouterProvider from "@/providers/RouterProvider";
+import StoreProvider from "@/providers/StoreProvider";
 
 /**
  * Root provider component that wraps the application with necessary context providers.

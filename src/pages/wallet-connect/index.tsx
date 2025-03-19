@@ -1,7 +1,7 @@
-import Card from "../../components/card/Card";
-import WalletContent from "./components/WalletContent";
-import WalletFooter from "./components/WalletFooter";
-import WalletHeader from "./components/WalletHeader";
+import Card from "@/components/card/Card";
+import WalletContent from "@/pages/wallet-connect/components/WalletContent";
+import WalletFooter from "@/pages/wallet-connect/components/WalletFooter";
+import WalletHeader from "@/pages/wallet-connect/components/WalletHeader";
 
 /**
  * Main page component for wallet connection functionality. Provides a user interface

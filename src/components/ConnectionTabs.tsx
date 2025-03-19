@@ -1,6 +1,6 @@
 "use client";
 
-import TabList from "./TabList";
+import TabList from "@/components/TabList";
 
 interface ConnectionTabsProps {
   activeTab: "qr" | "manual";

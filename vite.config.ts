@@ -8,11 +8,6 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": "/src",
-      "@components": "/src/components",
-      "@pages": "/src/pages",
-      "@routes": "/src/routes",
-      "@store": "/src/store",
-      "@utils": "/src/utils",
     },
   },
 });

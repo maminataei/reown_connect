@@ -1,6 +1,6 @@
-import CardContent from "../../../components/card/CardContent";
-import TabList from "../../../components/TabList";
-import { useTabStore } from "../../../store/init";
+import CardContent from "@/components/card/CardContent";
+import TabList from "@/components/TabList";
+import { useTabStore } from "@/store/init";
 import ManualConnectionTab from "./tabs/Manual";
 import QRCodeTab from "./tabs/QrCode";
 

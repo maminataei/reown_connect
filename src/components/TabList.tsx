@@ -1,6 +1,6 @@
 "use client";
 
-import Tab from "./tab";
+import Tab from "@/components/tab";
 
 interface ITab {
   id: string;
