@@ -1,8 +1,7 @@
 import CardContent from "@/components/card/CardContent";
 import TabList from "@/components/TabList";
 import { useTabStore } from "@/store/init";
-import ManualConnectionTab from "./tabs/Manual";
-import QRCodeTab from "./tabs/QrCode";
+import QRCodeTab from "@/pages/wallet-connect/components/tabs/QrCode";
 
 /**
  * A component that renders the wallet connection interface with tabs for QR code and manual connection methods.
@@ -28,17 +27,12 @@ const WalletContent = () => {
               id: "qr-code",
               label: "QR Code",
             },
-            {
-              id: "manual",
-              label: "Manual",
-            },
           ]}
           activeTab={currentTab}
           onTabChange={handleTabChange}
         />
       )}
       {currentTab === "qr-code" && <QRCodeTab />}
-      {currentTab === "manual" && <ManualConnectionTab />}
     </CardContent>
   );
 };
